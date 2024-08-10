@@ -1,0 +1,360 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: aquamarine;
+    background-image: url(bg.jpeg);
+    overflow: hidden;
+}
+
+.topbar {
+    position: absolute;
+    top: 0;
+    width: max-content;
+    height: 5px;
+    background-color: #333;
+    border-bottom: 3px solid gray;
+}
+
+.birthday {
+    position:relative ;
+    border-radius: 25px;
+    width: 250px;
+    height: 350px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+}
+
+.birthday:hover{
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthday:hover .kartudepan {
+    transform: rotateY(-160deg);
+}
+
+.birthday:hover .happy {
+    visibility: hidden;
+}
+
+.kartudepan {
+    position: relative;
+    border-radius: 25px;
+    background-color: #fff;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2)
+    30px 0 50px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+    border: 5px solid #333;
+}
+
+.happy{
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    margin: 30px;
+    background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+
+}
+
+.balon{
+    position: absolute;
+}
+
+.balon1,
+.balon2,
+.balon3,
+.balon4{
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.balon1{
+    background-color: palevioletred;
+    left: -10px;
+    top: 50px;
+}
+
+.balon2{
+    background-color: greenyellow;
+    left: 50px;
+    top: 20px;
+}
+
+.balon3{
+    background-color: skyblue;
+    left: 110px;
+    top: 50px;
+}
+
+.balon4{
+    background-color: yellow;
+    left: 170px;
+    top: 50px; 
+}
+
+.balon1::before,
+.balon2::before,
+.balon3::before,
+.balon4::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 155px;
+    background-color: #ffc848;
+    top: 95px;
+    left: 43px;
+}
+
+.balon1::after,
+.balon2::after,
+.balon3::after,
+.balon4::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top: 94px;
+    left: 37px;
+}
+
+.balon1::after {
+    border-bottom: 10px solid red;
+}
+
+.balon2::after {
+    border-bottom: 10px solid green;
+}
+
+.balon3::after {
+    border-bottom: 10px solid blue;
+}
+
+.balon4::after {
+    border-bottom: 10px solid rgb(212, 212, 10);
+}
+
+.kartudalam {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    border: 5px solid #333;
+}
+
+.hallo {
+    position: absolute;
+    top: 30px;
+}
+
+p {
+    position: absolute;
+    font-size: small;
+    font-family: "Brush Script MI", cursive;
+    margin: 40px;
+    color: #333;
+}
+
+.ucapan {
+    top: 70px;
+}
+
+.nama {
+    position: absolute;
+    left: 150px;
+    top: 250px;
+    color: #333;
+}
+
+.belakang {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    outline-color: #333;
+    outline-style: dashed;
+}
+
+.foto1 {
+    position:absolute ;
+    border-radius: 25px;
+    width: 320px;
+    height: 180px;
+    right: 50px;
+    top: 50px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+}
+
+.foto1:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.foto1:hover .fotodepan1 {
+    transform: rotateY(160deg);
+}
+
+.birthday:hover .cantik {
+    visibility: hidden;
+}
+
+.fotodepan1 {
+    position: relative;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 5px solid #333;
+    width: 320px;
+    height: 180px;
+    overflow: hidden;
+    transform-origin: right;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2)
+    30px 0 50px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+}
+
+.fotobelakang1 {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 320px;
+    height: 180px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    border: 5px solid #333;
+}
+
+.cantik {
+    position: absolute;
+    font-family: Tahoma, sans-serif;
+    left: 100px;
+    top: 55px;
+}
+
+.fotodepan1 .img {
+    position: absolute;
+    width: 320px;
+    height: 180px;
+}
+
+.foto2 {
+    position:absolute ;
+    border-radius: 25px;
+    border-color: #333;
+    width: 200px;
+    height: 200px;
+    left: 150px;
+    top: 50px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+}
+
+.foto2:hover {
+    transform: perspective(2500px) rotate(-5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.foto2:hover .fotodepan2 {
+    transform: rotatex(160deg);
+}
+
+.birthday:hover .ily {
+    visibility: hidden;
+}
+
+.fotodepan2 {
+    position: relative;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 5px solid #333;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transform-origin: top;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2)
+    30px 0 50px rgba(0, 0, 0, 0.5);
+    transition: 0.7s;
+}
+
+.fotobelakang2 {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    border: 5px solid #333;
+}
+
+.ily {
+    position: absolute;
+    font-family: Tahoma, sans-serif;
+    top: 65px;
+    left: 55px;
+}
+
+.fotodepan2 .img {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.topbar {
+    width: 100%;
+    height: 25px;
+}
+
+.gallery-button {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+}
+
+a {
+    color: #fff;
+}
+
+.dekorasi1 {
+    position: absolute;
+    left: 60px;
+    top: 230px;
+    z-index: -2;
+}
+
+.dekorasi1 img {
+    width: 400px;
+}
+
+.dekorasi2 {
+    position: absolute;
+    top: 240px;
+    right: 50px;
+    z-index: -2;
+}
+
+.dekorasi2 img {
+    width: 350px;
+}
+
